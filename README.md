@@ -1,47 +1,26 @@
-# Campus Analytics Engine — BS AI
+# Campus Analytics Engine — BS DS
 
-A robust, multi-file, menu-driven data analytics system designed for university management, focusing on C++ procedural programming fundamentals.
+A modular, menu-driven University Student Management System built using C++ procedural programming.
 
 ## Project Structure
-```text
-University-Student-Management-System/
-├── main.cpp
-├── file_handler/     (file_handler.h / .cpp)
-├── student_ops/      (student_ops.h / .cpp)
-├── course_ops/       (course_ops.h / .cpp)
-├── attendance/       (attendance.h / .cpp)
-├── grades/           (grades.h / .cpp)
-├── fee_tracker/      (fee_tracker.h / .cpp)
-├── reports/          (reports.h / .cpp)
-└── *.txt             (Data storage files)
+- `file_handler/`: Global file I/O operations.
+- `student_ops/`: Student data management.
+- `course_ops/`: Enrollment and course logic.
+- `attendance/`: Attendance tracking.
+- `grades/`: Grade/GPA calculations.
+- `fee_tracker/`: Fee and fine management.
+- `reports/`: Analytics and summary generation.
 
-```
+## Compilation & Usage
 
-## How to Compile
+1. Open terminal in the project root.
+   
+2. Compile: 
+   `g++ -std=c++11 main.cpp file_handler/*.cpp student_ops/*.cpp course_ops/*.cpp attendance/*.cpp grades/*.cpp fee_tracker/*.cpp reports/*.cpp -o campus_engine`
+   
+3. Run: `./campus_engine`
 
-Use the following command in your terminal to link all modules:
-
-```bash
-g++ -std=c++11 main.cpp \
-    file_handler/file_handler.cpp \
-    student_ops/student_ops.cpp \
-    course_ops/course.cpp \
-    attendance/attendance.cpp \
-    grades/grades.cpp \
-    fee_tracker/fee_tracker.cpp \
-    reports/reports.cpp \
-    -o campus_engine
-
-```
-
-## How to Run
-
-```bash
-./campus_engine
-
-```
-
-*Note: Ensure all `.txt` data files are present in the same directory as the executable.*
+Note: Ensure all `.txt` data files are present in the same directory as the main. 
 
 ## Features
 
